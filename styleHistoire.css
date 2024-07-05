@@ -1,0 +1,103 @@
+.circlePresentation2 {
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(0, 0, 0);
+    position: absolute;
+    clip-path: circle(0%);
+    top: 0;
+    right:0;
+    margin:auto;
+    z-index:3
+
+
+}
+
+.scene{
+    display: block;
+    height: 50rem;
+    width: 75rem;
+    margin-top: 3rem;
+}
+
+
+.blocHistoire {
+    width: 100%;
+    display: flex;
+    overflow: visible;
+    z-index: 2;
+    position: relative;
+}
+
+.verticalLine {
+    height: 95%;
+    width: 0.1rem;
+    background-color: #393939;
+    position: absolute;
+    top: 2.5%;
+    left: 3%;
+}
+
+.rightBlocHistoire {
+    width: 50%;
+    color: white;
+    position: relative;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+    padding: 5rem 0 6rem 0;
+}
+
+.texte2, .texte3, .texte4, .texte5, .texte6 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 9rem 0 6rem;
+    overflow: hidden;
+    margin-top: 3rem;
+}
+
+.titleChapitre, .titleChapitre2, .titleChapitre3, .titleChapitre4, .titleChapitre5 {
+    font-size: 5rem;
+    font-family: Lausane;
+    margin-bottom: 2rem;
+}
+
+.fontSometimes {
+    font-family: Sometimes;
+}
+
+.textChapitre, .textChapitre2, .textChapitre3, .textChapitre4, .textChapitre5 {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.stickySection {
+    position: sticky;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
+.anneeT {
+    position: absolute;
+    top: 0;
+    color: #393939;
+    right: 0;
+    font-size: 6.5rem;
+    overflow: hidden;
+    height: 6.5rem;
+    display: flex;
+    align-items: start;
+    mix-blend-mode: difference;
+}
+
+.anneeSolo {
+    display: flex;
+    flex-direction: column;
+}

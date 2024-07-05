@@ -1,0 +1,102 @@
+@font-face {
+    font-family: Lausane;
+    src: url(./fonts/Lausanne-Regular.otf);
+}
+
+@font-face {
+    font-family: Sometimes;
+    src: url(./fonts/Sometimes-Times.ttf);
+}
+
+
+.containerPresentationSociety{
+    height: 100vh;
+    position: fixed;
+    top:0;
+    z-index: 2;
+    left:0;
+    display: flex;
+    overflow: hidden;
+
+}
+
+.containerEtape{
+    height: 100%;
+}
+
+.etapeOne{
+    background-color: #ffffff;
+    display: flex;
+    position: relative;
+    width: 100vw;
+}
+
+.etapeTwo{
+    background-color: #ffffff;
+    color:black;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+
+}
+
+.etapeThree{
+    background-color: rgb(255, 11, 11);
+}
+
+
+.imgMe{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.presentationMe{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    color:rgb(0, 0, 0)
+}
+
+.titrePresentation{
+    font-size: 8rem;
+    line-height: 8rem;
+    margin-top: 6rem;
+    mix-blend-mode: difference;
+    font-family: Lausane;
+   white-space: nowrap;
+   color:rgb(255, 255, 255)
+}
+
+.allBlocProject{
+    display: flex;
+    gap:2rem;
+    align-items: center;
+}
+
+.blocProject{
+    width: 28rem;
+    height: 35rem;
+    border:2px solid white;
+    border-radius: 1rem;
+    margin:auto 0;
+    transform: rotate(-10deg);
+    animation: clipAnimation 3s forwards infinite;
+    background-color: #000000;
+}
+
+.titleProject{
+    font-family: Lausane;
+    color:rgb(0, 0, 0);
+    font-size: 10rem;
+    white-space: nowrap;
+    font-weight: bold;
+}
+
+.letterPTitle{
+    font-family: Sometimes!important;
+    display: inline-block;
+}
+
+
