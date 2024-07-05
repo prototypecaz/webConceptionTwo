@@ -36,3 +36,12 @@ div .project:nth-of-type(5) {
     transform: rotate(-20deg);
 
 }
+
+.imgTree{
+    display: block;
+    height: 50rem;
+    width: 75rem;
+    margin-top: 3rem;
+    display: none;
+    
+}

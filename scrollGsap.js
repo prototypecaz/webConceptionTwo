@@ -137,28 +137,25 @@ timeline.to('.circlePresentation2', {
 
 
 let lastYPercent = 0;
-let lastImageIndex = 0;
+let lastImageIndex = 1;
 const totalImages = 150;
-let isImageChanging = false;
 
 timeline.to('.rightBlocHistoire', {
   y: -moveDistanceBlocHistoire,
   ease: 'linear',
   onUpdate: function() {
     const progress = this.progress();
-    
+
     // Calculez l'index de l'image basé sur le pourcentage de progression
     let newImageIndex = Math.floor(progress * totalImages) + 1;
     newImageIndex = Math.max(1, Math.min(newImageIndex, totalImages));
 
-    // Changez l'image seulement si l'index a changé pour éviter des changements inutiles
-    if (newImageIndex !== lastImageIndex && !isImageChanging) {
-      isImageChanging = true;
-      requestAnimationFrame(() => {
-        imgTree.src = `./imgs/imgTree/${newImageIndex}.jpg`;
-        lastImageIndex = newImageIndex;
-        isImageChanging = false;
-      });
+    // Changez la visibilité des images seulement si l'index a changé pour éviter des changements inutiles
+    if (newImageIndex !== lastImageIndex) {
+
+      document.getElementById(`img-${newImageIndex}`).style.display = 'block';
+      document.getElementById(`img-${lastImageIndex}`).style.display = 'none';
+      lastImageIndex = newImageIndex;
     }
 
     const yPercent = -(progress * 80); // Change yPercent from -0% to -80%
@@ -194,4 +191,4 @@ timeline.to('.rightBlocHistoire', {
 
 }
 
-initAnimations();
+document.addEventListener('DOMContentLoaded', function() {initAnimations();})
