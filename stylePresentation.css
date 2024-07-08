@@ -28,7 +28,8 @@
     background-color: #ffffff;
     display: flex;
     position: relative;
-    width: 100vw;
+    width: 120vw;
+    padding-left: 5rem;
 }
 
 .etapeTwo{
@@ -49,6 +50,7 @@
     height: 100%;
     display: flex;
     justify-content: center;
+    width: 40%;
 }
 
 .presentationMe{
@@ -56,15 +58,16 @@
     display: flex;
     flex-direction: column;
     position: relative;
-    color:rgb(0, 0, 0)
+    color:rgb(0, 0, 0);
+
 }
 
 .titrePresentation{
-    font-size: 8rem;
+    font-size: 9rem;
     line-height: 8rem;
     margin-top: 6rem;
     mix-blend-mode: difference;
-    font-family: Lausane;
+    font-family: Lausane,sans-serif;
    white-space: nowrap;
    color:rgb(255, 255, 255)
 }
@@ -89,8 +92,7 @@
 .titleProject{
     font-family: Lausane;
     color:rgb(0, 0, 0);
-    font-size: 10rem;
-    white-space: nowrap;
+    font-size: 9rem;
     font-weight: bold;
 }
 
@@ -99,4 +101,111 @@
     display: inline-block;
 }
 
+.language{
+    font-size: 1rem;
+    outline: 1px solid black;
+    padding:0.4rem 1rem 0.4rem 1.2rem;
+    font-family: Sometimes;
+    font-weight: bold;
+    letter-spacing: 0.2rem;
 
+}
+
+.titleCard{
+    color:white;
+    text-align: center;
+    padding: 2rem 0;
+    font-size: 1.5rem;
+    font-family: lausane;
+}
+
+.relativeHeightWidth {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.marginLeft13rem {
+    margin-left: 13rem;
+}
+
+.paragraphStyle {
+    width: 40rem;
+    font-size: 2rem;
+    margin-top: 5rem;
+    font-family: Lausane;
+}
+
+.fullHeightFlex {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 2rem 0;
+}
+
+.halfWidthPaddingLeft {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    padding-left: 7rem;
+}
+
+.circleStyle {
+    height: 11rem;
+    width: 11rem;
+    border: 1px solid white;
+    border-radius: 100%;
+    margin: 2rem auto;
+    background-color: white;
+}
+
+.whiteTextCenter {
+    color: white;
+    margin-top: 4rem;
+    font-size: 1.2rem;
+    text-align: center;
+    font-family: Lausane;
+}
+
+.largeNumber {
+    font-size: 1.4rem;
+    font-family: Sometimes;
+    font-weight: bold;
+}
+
+.halfWidthFlexColumn {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.marginAutoPaddingRight {
+    margin: auto 0;
+    padding-right: 7rem;
+}
+
+.flexAlignStartEnd {
+    display: flex;
+    align-items: start;
+    justify-content: end;
+}
+
+.heightOverflow {
+    height: 8rem;
+    overflow-y: hidden;
+    overflow-x: visible;
+}
+
+.flexColumn {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Ajoutez ici les autres styles inline extraits */

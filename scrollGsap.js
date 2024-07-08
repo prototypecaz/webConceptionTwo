@@ -86,14 +86,17 @@ function initAnimations() {
 
 
   timeline.to('.titrePresentation', {
-    xPercent: -36,
+    xPercent: -33,
 },0.6);
 
 
 
 
-
-const projects = document.querySelectorAll('.project');
+const orbit = document.querySelector('.orbit');
+const projects = document.querySelectorAll('.animeProject');
+let globalProgress = 0;
+const projectNumber = document.querySelector('.projectNumber');
+const cube = document.querySelector('.cube');
 
 projects.forEach((project, index) => {
   // Obtenir la transformation actuelle
@@ -107,23 +110,32 @@ projects.forEach((project, index) => {
     const b = values[1];
     initialRotate = Math.round(Math.atan2(b, a) * (180 / Math.PI)); // Convertir en degrés
   }
-
-  timeline.fromTo(project, {
-    rotate: initialRotate - 55,
-    y: -1000,
-  }, {
+console.log(project)
+  timeline.to(project, {
     y: 0,
+    x:0,
     rotate: initialRotate,
     ease: "linear",
-    duration: 0.15
+    duration: 0.15,
+    onUpdate: function(){
+
+      globalProgress = (this.progress() + index) / projects.length;
+      console.log(globalProgress)
+      if (this.progress() > 0 && this.progress() <= 1) {
+        projectNumber.style.transform = `translateY(${globalProgress * -75}%)`;
+
+        orbit.style.transform = `rotate(${globalProgress * 360}deg)`;
+        cube.style.transform = `rotateX(${globalProgress * 270}deg)`;
+      }
+    }
   });
 });
 
 
 
-timeline.to('.titleProject', {
+/*timeline.to('.titleProject', {
   yPercent: 40,
-},0.6);
+},0.6);*/
 
 timeline.to('.blocProject', {
   rotation: 0, // Durée de l'animation pour chaque élément
@@ -145,7 +157,7 @@ timeline.to('.rightBlocHistoire', {
   ease: 'linear',
   onUpdate: function() {
     const progress = this.progress();
-
+console.log('ok')
     // Calculez l'index de l'image basé sur le pourcentage de progression
     let newImageIndex = Math.floor(progress * totalImages) + 1;
     newImageIndex = Math.max(1, Math.min(newImageIndex, totalImages));
@@ -174,7 +186,10 @@ timeline.to('.rightBlocHistoire', {
 
 
 
-
+timeline.to('.circlePresentation3', {
+  clipPath: 'circle(100%)',
+  ease: 'linear',
+});
 
 
 
