@@ -16,7 +16,6 @@
 
 html {
     font-size: 1vw;
-
 }
 
 body::-webkit-scrollbar {
@@ -167,3 +166,62 @@ a {
 
 
 }
+
+
+@media only screen and (max-width: 1440px) {
+    .container {
+        background-color: #31e43a;
+        
+    }
+}
+
+
+/*@media only screen and (max-width: 320px) {
+   html{
+    font-size: 1.8vw;
+   }
+
+   .vertical-separator{
+    width: 0.15rem;
+   }
+
+
+   .logo{
+    font-size: 5rem;
+   }
+
+   .year-display{
+    width: 20%;
+   }
+
+   .main-title{
+    font-size: 8rem;
+   }
+
+   .year-numbers{
+    font-size: 12rem;
+    left:42%
+   }
+
+   .title-section{
+    width: 80%;
+   }
+
+   .vertical-separator{
+    right:11%
+   }
+
+   .social-links{
+    display: none;
+   }
+
+   .developer-title{
+    transform: rotate(180deg);
+    writing-mode: vertical-lr;
+    font-size: 2rem;
+    margin-bottom: 10rem;
+   }
+
+}*/
+
+

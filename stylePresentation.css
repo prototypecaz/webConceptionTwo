@@ -10,13 +10,13 @@
 
 
 .containerPresentationSociety{
-    height: 100vh;
     position: fixed;
     top:0;
     z-index: 2;
     left:0;
     display: flex;
     overflow: hidden;
+    height: 100vh;
 
 }
 
@@ -30,6 +30,8 @@
     position: relative;
     width: 120vw;
     padding-left: 5rem;
+    height: 100%;
+
 }
 
 .etapeTwo{
@@ -38,6 +40,8 @@
     width: 100vw;
     display: flex;
     justify-content: center;
+    height: 100%;
+
 
 }
 
@@ -47,10 +51,14 @@
 
 
 .imgMe{
+    height: 52rem;
+    margin-top: auto;
+
+}
+
+.imgMe > img{
+    object-fit: cover;
     height: 100%;
-    display: flex;
-    justify-content: center;
-    width: 40%;
 }
 
 .presentationMe{
@@ -172,6 +180,17 @@
     font-family: Lausane;
 }
 
+.project{
+    width: 28rem;
+    height: 35rem;
+    position: absolute;
+    border:2px solid white;
+    border-radius: 1rem;
+    padding:0 4rem
+}
+
+
+
 .largeNumber {
     font-size: 1.4rem;
     font-family: Sometimes;
@@ -209,3 +228,68 @@
 }
 
 /* Ajoutez ici les autres styles inline extraits */
+
+
+@media only screen and (max-width: 320px) {
+    .etapeOne{
+        width: 230vw;
+    }
+
+    .titrePresentation{
+        font-size: 11rem;
+    }
+
+    .paragraphStyle{
+        font-size: 3rem;
+        width: 50rem;
+        margin-left: 3rem;
+        margin-top: 10rem;
+    }
+
+    .imgMe{
+        width: 10%;
+    }
+
+    .fullHeightFlex{
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .presentationMe{
+        width: 90%;
+        margin-left: 10rem;
+    }
+
+    .halfWidthFlexColumn,.halfWidthPaddingLeft{
+        width: 100%;
+
+    }
+
+    .halfWidthPaddingLeft{
+        position: relative;
+        flex-grow: 1;
+        align-items: end;
+        margin-bottom: 10rem;
+
+    }
+
+    .halfWidthFlexColumn{
+
+        height: 50%;
+
+
+    }
+
+    .project{
+        width: 40rem;
+        height: 55rem;
+    }
+
+    .halfWidthPaddingLeft{
+        padding:0
+    }
+
+    .marginAutoPaddingRight{
+        margin:0
+    }
+ }
