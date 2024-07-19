@@ -33,7 +33,7 @@ function initAnimations() {
 
       // Déplacer le containerPresentationSociety
       const container = document.querySelector('.containerPresentationSociety');
-      const moveDistance = container.offsetWidth - window.innerWidth;
+      const moveDistance = (container.offsetWidth - window.innerWidth) / container.offsetWidth * 100;
 
       const rightBlocHistoire = document.querySelector('.rightBlocHistoire');
       const moveDistanceBlocHistoire = rightBlocHistoire.offsetHeight - window.innerHeight;
@@ -80,13 +80,13 @@ function initAnimations() {
 
 
   timeline.to('.containerPresentationSociety', {
-    x: -moveDistance, // Déplacer le container de manière à ce que son bord droit touche le bord droit de la fenêtre
+    xPercent: -moveDistance, // Déplacer le container de manière à ce que son bord droit touche le bord droit de la fenêtre
     ease: 'linear',
   },0.6);
 
 
   timeline.to('.titrePresentation', {
-    xPercent: -33,
+    x: -550,
 },0.6);
 
 

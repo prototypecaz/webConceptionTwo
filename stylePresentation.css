@@ -28,7 +28,6 @@
     background-color: #ffffff;
     display: flex;
     position: relative;
-    width: 120vw;
     padding-left: 5rem;
     height: 100%;
 
@@ -51,7 +50,7 @@
 
 
 .imgMe{
-    height: 52rem;
+    height: 100vh;
     margin-top: auto;
 
 }
@@ -67,6 +66,7 @@
     flex-direction: column;
     position: relative;
     color:rgb(0, 0, 0);
+    width: 90vw;
 
 }
 
@@ -217,7 +217,7 @@
 }
 
 .heightOverflow {
-    height: 8rem;
+    height: 9rem;
     overflow-y: hidden;
     overflow-x: visible;
 }
@@ -227,69 +227,234 @@
     flex-direction: column;
 }
 
-/* Ajoutez ici les autres styles inline extraits */
 
 
-@media only screen and (max-width: 320px) {
-    .etapeOne{
-        width: 230vw;
+div .project:nth-of-type(1) {
+    background-color: rgb(18, 18, 18);
+    transform: rotate(0deg);
+
+}
+
+div .project:nth-of-type(2) {
+    background-color: rgb(68, 68, 68);
+    transform: rotate(-5deg) translate(0,-1000px);
+
+}
+
+div .project:nth-of-type(3) {
+    background-color: rgb(119, 119, 119);
+    transform: rotate(-10deg) translate(0,-1000px);
+
+}
+
+div .project:nth-of-type(4) {
+    background-color: rgb(190, 190, 190);
+    transform: rotate(-14.9deg) translate(0,-1000px);
+
+}
+
+
+div .project:nth-of-type(5) {
+    background-color: rgb(226, 227, 227);
+    transform: rotate(-20deg) translate(0,-1000px);
+
+}
+
+
+
+.containerPoint {
+    position: relative;
+    width: 3rem;
+    height: 3rem;
+    align-self: flex-end;
+    margin-right: 2rem;
+}
+
+.center-circle {
+    width: 100%;
+    height: 100%;
+    border: 2px solid grey;
+    border-radius: 100%;
+}
+
+.orbit {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3rem; /* Diamètre de l'orbite */
+    height: 3rem; /* Diamètre de l'orbite */
+    animation: rotate 5s linear infinite;
+}
+
+.point {
+    position: absolute;
+    top: 4%;
+    left: 50%;
+    width: 0.5rem;
+    height: 0.5rem;
+    background-color: black;
+    border-radius: 100%;
+    transform: translate(-50%, -50%);
+}
+
+
+
+.containerRotate {
+    height: 2.15rem;
+    perspective: 800px;
+    perspective-origin: center;
+    padding-right: 1rem;
+  }
+
+  .cube {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    display: flex;
+    justify-content: end;
+  }
+  
+  /*@keyframes cubeRotate {
+    0% {
+      transform: rotateX(0deg);
+    }
+    25% {
+      transform: rotateX(-90deg);
+    }
+    50% {
+      transform: rotateX(-180deg);
+    }
+    75% {
+      transform: rotateX(-270deg);
+    }
+    100% {
+      transform: rotateX(-360deg);
+    }
+  }*/
+
+  .side {
+    position: absolute;
+    font-size: 1rem;
+    border: 2px solid white;
+    backface-visibility: hidden;
+    gap:1rem;
+    display: flex;
+  }
+
+  .front {
+    transform: translateZ(1.2rem);
+  }
+
+  .back {
+
+    transform: translateZ(-1.2rem) rotateY(-180deg);
+  }
+  .back .language {
+    transform: rotateY(180deg) rotateX(180deg); /* Inverser le texte pour qu'il soit lisible */
+  }
+  .top {
+
+    transform: rotateX(90deg) translateZ(1.2rem);
+  }
+
+  .bottom {
+
+    transform: rotateX(-90deg) translateZ(1.2rem);
+  }
+
+
+ @media only screen and (min-width : 768px) and (max-width : 991px) and (orientation : portrait) {
+
+    .imgMe{
+        height: 100vh;
+        margin-top: auto;
+        margin-left: -28rem;
+        width: 75rem;
     }
 
+
     .titrePresentation{
-        font-size: 11rem;
+        font-size: 12rem;
+        margin-top: 12rem;
+        line-height: 11rem;
     }
 
     .paragraphStyle{
+        width: 60rem;
         font-size: 3rem;
-        width: 50rem;
-        margin-left: 3rem;
-        margin-top: 10rem;
     }
 
-    .imgMe{
-        width: 10%;
-    }
 
     .fullHeightFlex{
         flex-direction: column;
         justify-content: center;
     }
 
-    .presentationMe{
-        width: 90%;
-        margin-left: 10rem;
-    }
+   .halfWidthFlexColumn{
+    height: auto;
+    width: 100%;
 
-    .halfWidthFlexColumn,.halfWidthPaddingLeft{
-        width: 100%;
 
-    }
+    flex:1
+   }
 
     .halfWidthPaddingLeft{
-        position: relative;
-        flex-grow: 1;
         align-items: end;
-        margin-bottom: 10rem;
 
-    }
-
-    .halfWidthFlexColumn{
-
-        height: 50%;
-
-
+        position: relative;
+        padding-left: 0;
+        flex:1.5
     }
 
     .project{
+        height: 50rem;
         width: 40rem;
-        height: 55rem;
-    }
-
-    .halfWidthPaddingLeft{
-        padding:0
     }
 
     .marginAutoPaddingRight{
-        margin:0
+
+        padding-right: 7rem;
     }
- }
+
+    .titleProject{
+        font-size: 12rem;
+    }
+
+    .heightOverflow{
+        height: 12rem;
+    }
+
+    .language{
+        font-size: 2rem;
+    }
+
+    .front {
+        transform: translateZ(2.2rem);
+      }
+    
+      .back {
+    
+        transform: translateZ(-2.2rem) rotateY(-180deg);
+      }
+
+      .top {
+    
+        transform: rotateX(90deg) translateZ(2.2rem);
+      }
+
+      .bottom {
+    
+        transform: rotateX(-90deg) translateZ(2.2rem);
+      }
+
+      .containerRotate{
+        height: 3.15rem;
+        margin-top: 2rem;
+      }
+
+      .containerPoint,.orbit{
+        width: 3.5rem;
+        height: 3.5rem;
+      }
+}
