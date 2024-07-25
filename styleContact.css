@@ -75,3 +75,33 @@
     letter-spacing: 0.5rem;
 }
 
+@media only screen and (max-width : 991px) and (orientation : portrait) {
+
+
+    .nameContact{
+        font-size: 10rem;
+    }
+
+    .containerNameTwoChild div:nth-of-type(1) > p,.reserved,.containerInformations {
+        font-size: 2rem;
+    }
+
+    .reserved{
+        margin-top: 5rem;
+    }
+}
+
+
+@media only screen and (max-width : 440px) and (orientation : portrait) {
+    .nameContact{
+        font-size: 12rem;
+    }
+
+    .containerNameTwoChild div:nth-of-type(1) > p,.reserved,.containerInformations {
+        font-size: 3rem;
+    }
+
+    .reserved{
+        margin-top: 10rem;
+    }
+}

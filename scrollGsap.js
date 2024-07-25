@@ -44,7 +44,7 @@ function initAnimations() {
       scrollTrigger: {
         trigger: '.container',
         start: 'top top',
-        end: () => offsetWidth + windowInnerWidth + moveDistanceBlocHistoire + 5000  , // Ajustez cette valeur selon la durée souhaitée de l'animation
+        end: () => offsetWidth + windowInnerWidth + moveDistanceBlocHistoire , // Ajustez cette valeur selon la durée souhaitée de l'animation
         scrub: 2,
         pin: true,
 
@@ -70,8 +70,7 @@ function initAnimations() {
           x: 0,
           duration: 0.3,
           ease: 'bounce.out',
-          delay:Math.random() * 0.4,
-          markers:true
+          delay:Math.random() * 0.4
         },
         0
       );
@@ -86,7 +85,7 @@ function initAnimations() {
 
 
   timeline.to('.titrePresentation', {
-    x: -550,
+    xPercent: -23,
 },0.6);
 
 

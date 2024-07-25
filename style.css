@@ -170,60 +170,115 @@ a {
 
 
 
-@media only screen and (min-width : 768px) and (max-width : 991px) and (orientation : portrait) {
-    /* Styles */
-    .container {
-        background-color: #31e43a;
+@media only screen and (max-width : 991px) and (orientation : portrait) {
 
+
+    .social-links{
+        display: none;
     }
+
+    .logo{
+        font-size: 4rem;
     }
 
-/*@media only screen and (max-width: 320px) {
-   html{
-    font-size: 1.8vw;
-   }
+    .main-title{
+        font-size: 12rem;
+    }
 
-   .vertical-separator{
-    width: 0.15rem;
-   }
+    .year-numbers{
+        font-size: 13rem;
+    }
+
+    .subtitle{
+        font-size: 10rem;
+    }
+
+    .project-title{
+        line-height: 10rem;
+    }
+
+    .circle{
+        height: 6rem;
+        width: 6rem;
+    }
+
+    .developer-title{
+        writing-mode: vertical-rl;
+        transform: rotate(180deg);
+        margin-bottom: 15rem;
+        font-size: 2.5rem;
+    }
+
+    .year-numbers{
+        left: 41%;
+    }
+
+    .vertical-separator{
+        right: 7%;
+    }
+
+    .year-display{
+        width: 10%
+    }
+}
+
+@media only screen and (max-width : 815px) and (orientation : portrait) {
+    .year-numbers{
+        font-size: 15rem;
+    }
+
+    .vertical-separator{
+        right: 8%;
+    }
+
+    .year-numbers{
+        left: 32%;
+    }
+}
 
 
-   .logo{
-    font-size: 5rem;
-   }
 
-   .year-display{
-    width: 20%;
-   }
+@media only screen and (max-width : 639.99px) and (orientation : portrait) {
 
-   .main-title{
-    font-size: 8rem;
-   }
 
-   .year-numbers{
-    font-size: 12rem;
-    left:42%
-   }
 
-   .title-section{
-    width: 80%;
-   }
+    .logo{
+        font-size: 6rem;
+    }
 
-   .vertical-separator{
-    right:11%
-   }
+    .main-title{
+        font-size: 14rem;
+    }
 
-   .social-links{
-    display: none;
-   }
+    .year-numbers{
+        font-size: 17rem;
+    }
 
-   .developer-title{
-    transform: rotate(180deg);
-    writing-mode: vertical-lr;
-    font-size: 2rem;
-    margin-bottom: 10rem;
-   }
+    .subtitle{
+        font-size: 12rem;
+    }
 
-}*/
+    .project-title{
+        line-height: 12rem;
+    }
 
+    .circle{
+        height: 7rem;
+        width: 7rem;
+    }
+
+    .developer-title{
+        margin-bottom: 20rem;
+        font-size: 4.5rem;
+    }
+
+    .year-numbers{
+        left: 22%;
+    }
+
+    .vertical-separator{
+        right: 10%;
+    }
+
+}
 

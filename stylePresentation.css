@@ -66,7 +66,7 @@
     flex-direction: column;
     position: relative;
     color:rgb(0, 0, 0);
-    width: 90vw;
+    /*width: 90vw;*/
 
 }
 
@@ -160,7 +160,6 @@
     justify-content: center;
     align-items: center;
     width: 50%;
-    padding-left: 7rem;
 }
 
 .circleStyle {
@@ -237,26 +236,26 @@ div .project:nth-of-type(1) {
 
 div .project:nth-of-type(2) {
     background-color: rgb(68, 68, 68);
-    transform: rotate(-5deg) translate(0,-1000px);
+    transform: rotate(-5deg) translate(0,-100vh);
 
 }
 
 div .project:nth-of-type(3) {
     background-color: rgb(119, 119, 119);
-    transform: rotate(-10deg) translate(0,-1000px);
+    transform: rotate(-10deg) translate(0,-100vh);
 
 }
 
 div .project:nth-of-type(4) {
     background-color: rgb(190, 190, 190);
-    transform: rotate(-14.9deg) translate(0,-1000px);
+    transform: rotate(-14.9deg) translate(0,-100vh);
 
 }
 
 
 div .project:nth-of-type(5) {
     background-color: rgb(226, 227, 227);
-    transform: rotate(-20deg) translate(0,-1000px);
+    transform: rotate(-20deg) translate(0,-100vh);
 
 }
 
@@ -363,27 +362,60 @@ div .project:nth-of-type(5) {
     transform: rotateX(-90deg) translateZ(1.2rem);
   }
 
+  .titrePresentationMobile{
+    display: none;
+  }
 
- @media only screen and (min-width : 768px) and (max-width : 991px) and (orientation : portrait) {
+ @media only screen and (max-width : 991px) and (orientation : portrait) {
+
+    .titrePresentationMobile{
+        display: block;
+        font-size: 8rem;
+        line-height: 7rem;
+        padding: 0 4rem;
+        text-align: center;
+        margin-top: auto;
+      }
+
+      .paragraphStyle{
+        width: 70rem;
+        font-size: 5.25rem;
+        margin-top: 0;
+
+    }
+
+
+      .marginLeft13rem{
+        margin-top: auto;
+        margin-bottom: auto;
+      }
+
+      .titrePresentation{
+        display: none;
+      }
 
     .imgMe{
-        height: 100vh;
-        margin-top: auto;
-        margin-left: -28rem;
-        width: 75rem;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        margin-left: 0;
+        margin-top: 0;
+
+
+    }
+
+    .imgMe > img{
+        object-fit: cover;
+        height: 70%;
+    }
+
+    .etapeOne{
+        padding-left: 0;
     }
 
 
-    .titrePresentation{
-        font-size: 12rem;
-        margin-top: 12rem;
-        line-height: 11rem;
-    }
-
-    .paragraphStyle{
-        width: 60rem;
-        font-size: 3rem;
-    }
 
 
     .fullHeightFlex{
@@ -394,22 +426,20 @@ div .project:nth-of-type(5) {
    .halfWidthFlexColumn{
     height: auto;
     width: 100%;
-
-
     flex:1
    }
 
     .halfWidthPaddingLeft{
         align-items: end;
-
         position: relative;
         padding-left: 0;
-        flex:1.5
+        flex:1.5;
+        width: 100%;
     }
 
     .project{
-        height: 50rem;
-        width: 40rem;
+        height: 500px;
+        width: 400px;
     }
 
     .marginAutoPaddingRight{
@@ -430,22 +460,22 @@ div .project:nth-of-type(5) {
     }
 
     .front {
-        transform: translateZ(2.2rem);
+        transform: translateZ(2rem);
       }
-    
+
       .back {
-    
-        transform: translateZ(-2.2rem) rotateY(-180deg);
+
+        transform: translateZ(-2rem) rotateY(-180deg);
       }
 
       .top {
-    
-        transform: rotateX(90deg) translateZ(2.2rem);
+
+        transform: rotateX(90deg) translateZ(2rem);
       }
 
       .bottom {
-    
-        transform: rotateX(-90deg) translateZ(2.2rem);
+
+        transform: rotateX(-90deg) translateZ(2rem);
       }
 
       .containerRotate{
@@ -456,5 +486,324 @@ div .project:nth-of-type(5) {
       .containerPoint,.orbit{
         width: 3.5rem;
         height: 3.5rem;
+      }
+
+      .point{
+        width: 0.7rem;
+        height: 0.7rem;
+      }
+}
+
+@media only screen and (min-width : 640px) and (max-width : 767.99px) and (orientation : portrait) {
+
+    .titrePresentationMobile{
+        font-size: 9rem;
+        line-height: 8rem;
+      }
+
+    .paragraphStyle{
+        font-size: 5.30rem;
+    }
+
+    .project{
+      height: 470px;
+      width: 380px;
+  }
+
+  .titleProject{
+    font-size: 13rem;
+}
+
+.language{
+  font-size: 2.5rem;
+}
+
+.front {
+  transform: translateZ(2.5rem);
+}
+
+.back {
+
+  transform: translateZ(-2.5rem) rotateY(-180deg);
+}
+
+.top {
+
+  transform: rotateX(90deg) translateZ(2.5rem);
+}
+
+.bottom {
+
+  transform: rotateX(-90deg) translateZ(2.5rem);
+}
+
+.containerRotate{
+  height: 4.15rem;
+}
+
+.containerPoint,.orbit{
+  width: 4.5rem;
+  height: 4.5rem;
+}
+
+.point{
+  width: 0.8rem;
+  height: 0.8rem;
+}
+
+}
+
+@media only screen and (min-width : 540px) and (max-width : 639.99px) and (orientation : portrait) {
+
+    .titrePresentationMobile{
+        font-size: 10rem;
+        line-height: 9rem;
+      }
+
+
+    .paragraphStyle{
+        width: 75rem;
+        font-size: 5.5rem;
+    }
+
+    .project{
+      height: 450px;
+      width: 320px;
+  }
+
+  .titleProject{
+    font-size: 14rem;
+}
+
+.language{
+  font-size: 3rem;
+}
+
+.front {
+  transform: translateZ(3rem);
+}
+
+.back {
+
+  transform: translateZ(-3rem) rotateY(-180deg);
+}
+
+.top {
+
+  transform: rotateX(90deg) translateZ(3rem);
+}
+
+.bottom {
+
+  transform: rotateX(-90deg) translateZ(3rem);
+}
+
+.containerRotate{
+  height: 5.15rem;
+}
+
+.containerPoint,.orbit{
+  width: 5.5rem;
+  height: 5.5rem;
+}
+
+.point{
+  width: 0.8rem;
+  height: 0.8rem;
+}
+
+}
+
+@media only screen and (min-width : 440px) and (max-width : 539.99px) and (orientation : portrait) {
+
+    .titrePresentationMobile{
+        font-size: 11rem;
+        line-height: 10rem;
+      }
+
+
+    .paragraphStyle{
+        width: 100vw;
+        font-size: 5.6rem;
+        padding: 0 4rem;
+    }
+
+    .project{
+      height: 400px;
+      width: 280px;
+  }
+
+    .titleProject{
+      font-size: 15rem;
+  }
+  
+  .language{
+    font-size: 3.5rem;
+  }
+  
+  .front {
+    transform: translateZ(3.5rem);
+  }
+  
+  .back {
+  
+    transform: translateZ(-3.5rem) rotateY(-180deg);
+  }
+  
+  .top {
+  
+    transform: rotateX(90deg) translateZ(3.5rem);
+  }
+
+  .bottom {
+  
+    transform: rotateX(-90deg) translateZ(3.5rem);
+  }
+  
+  .containerRotate{
+    height: 5.5rem;
+  }
+  
+  .containerPoint,.orbit{
+    width: 5.5rem;
+    height: 5.5rem;
+  }
+  
+  .point{
+    width: 0.8rem;
+    height: 0.8rem;
+  }
+
+}
+
+@media only screen and (min-width : 340px) and (max-width : 439.99px) and (orientation : portrait) {
+
+    .titrePresentationMobile{
+        font-size: 12rem;
+        line-height: 11rem;
+        padding: 0 5rem;
+      }
+
+    .paragraphStyle{
+        width: 100vw;
+        font-size: 6.2rem;
+        padding: 0 4rem;
+    }
+
+    .project{
+      height: 330px;
+      width: 230px;
+  }
+
+      .titleProject {
+        font-size: 15rem;
+        margin-bottom: 3rem;
+      }
+
+      .language{
+        font-size: 4rem;
+    }
+
+    .containerRotate{
+        height: 5.5rem;
+    }
+
+    .front {
+        transform: translateZ(4.2rem);
+      }
+
+      .back {
+
+        transform: translateZ(-4.2rem) rotateY(-180deg);
+      }
+
+      .top {
+
+        transform: rotateX(90deg) translateZ(4.2rem);
+      }
+
+      .bottom {
+
+        transform: rotateX(-90deg) translateZ(4.2rem);
+      }
+
+      .containerPoint,.orbit{
+        width: 6.5rem;
+        height: 6.5rem;
+      }
+
+      .point{
+        width: 1rem;
+        height: 1rem;
+      }
+}
+
+@media only screen and (min-width : 240px) and (max-width : 339.99px) and (orientation : portrait) {
+
+    .titrePresentationMobile{
+        font-size: 13rem;
+        line-height: 12rem;
+        padding: 0 6rem;
+      }
+
+
+    .paragraphStyle{
+        width: 100vw;
+        font-size: 7rem;
+        padding: 0 5rem;
+        margin-left: 12rem;
+    }
+
+    .project{
+      height: 250px;
+      width: 160px;
+  }
+
+      .titleProject {
+        font-size: 15rem;
+        margin-bottom: 3rem;
+      }
+
+      .side{
+        gap:2rem;
+
+      }
+
+      .language{
+        font-size: 4rem;
+        outline: 0.1px solid black;
+    }
+
+    .containerRotate{
+        height: 5.5rem;
+    }
+
+    .front {
+        transform: translateZ(4.2rem);
+      }
+
+      .back {
+
+        transform: translateZ(-4.2rem) rotateY(-180deg);
+      }
+
+      .top {
+
+        transform: rotateX(90deg) translateZ(4.2rem);
+      }
+
+      .bottom {
+
+        transform: rotateX(-90deg) translateZ(4.2rem);
+      }
+
+      .containerPoint,.orbit{
+        width: 6.5rem;
+        height: 6.5rem;
+      }
+
+      .point{
+        width: 1rem;
+        height: 1rem;
       }
 }

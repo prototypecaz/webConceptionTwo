@@ -103,49 +103,101 @@
 }
 
 
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width : 991px) and (orientation : portrait) {
     .blocImgTree{
-        display: none!important;
+        display: none;
     }
+
 
 
     .rightBlocHistoire{
         width: 100%;
-        z-index: 0;
     }
 
     .stickySection{
-        height: initial;
-        width: initial;
+        width: 0;
     }
 
-    .anneeT{
-        background-color: black;
-        height:8rem;
-        font-size: 8rem;
-        width: 100vw;
-        justify-content: end
-    };
 
-    .texte2, .texte3, .texte4, .texte5, .texte6 {
 
-        padding: 0 2rem 0 4rem;
-
-    }
-
-    .titleChapitre,.titleChapitre2,.titleChapitre3,.titleChapitre4,.titleChapitre5{
-        text-align: left;
+    .titleChapitre, .titleChapitre2, .titleChapitre3, .titleChapitre4, .titleChapitre5 {
         font-size: 9rem;
-        margin-bottom: 5rem;
+        margin-bottom: 6rem;
     }
 
-    .textChapitre,.textChapitre2,.textChapitre3,.textChapitre4,.textChapitre5{
-        font-size: 2.4rem;
-        text-align: left;
+    .textChapitre, .textChapitre2, .textChapitre3, .textChapitre4, .textChapitre5 {
+        font-size: 2.5rem;
         gap:3rem
     }
 
-    .verticalLine{
-        display: none;
+    .anneeT{
+        font-size: 8.5rem;
+        height: 8.5rem;
+    }
+}
+
+
+@media only screen and (max-width : 815px) and (orientation : portrait) {
+    .textChapitre, .textChapitre2, .textChapitre3, .textChapitre4, .textChapitre5 {
+        font-size: 2.8rem;
+        gap:3rem
+    }
+
+    .anneeT{
+        font-size: 10rem;
+        height: 10rem;
+    }
+}
+
+
+@media only screen and (min-width : 640px) and (max-width : 767.99px) and (orientation : portrait) {
+
+    .titleChapitre, .titleChapitre2, .titleChapitre3, .titleChapitre4, .titleChapitre5 {
+        font-size: 10rem;
+        margin-bottom: 6rem;
+    }
+
+    .textChapitre, .textChapitre2, .textChapitre3, .textChapitre4, .textChapitre5 {
+        font-size: 2.5rem;
+        gap:4rem
+    }
+
+    .anneeT{
+        font-size: 9.5rem;
+        height: 9.5rem;
+    }
+}
+
+@media only screen and (max-width : 639.99px) and (orientation : portrait) {
+    .titleChapitre, .titleChapitre2, .titleChapitre3, .titleChapitre4, .titleChapitre5 {
+        font-size: 10rem;
+        margin-bottom: 7rem;
+    }
+
+    .textChapitre, .textChapitre2, .textChapitre3, .textChapitre4, .textChapitre5 {
+        font-size: 2.8rem;
+        gap:4rem
+    }
+
+    .anneeT{
+        font-size: 10.5rem;
+        height: 10.5rem;
+    }
+}
+
+@media only screen and (max-width : 440px) and (orientation : portrait) {
+    .titleChapitre, .titleChapitre2, .titleChapitre3, .titleChapitre4, .titleChapitre5 {
+        font-size: 11rem;
+        margin-bottom: 8rem;
+    }
+
+    .textChapitre, .textChapitre2, .textChapitre3, .textChapitre4, .textChapitre5 {
+        font-size: 3.8rem;
+        gap:4rem
+    }
+
+    .anneeT{
+        font-size: 12.5rem;
+        height: 12.5rem;
     }
 }
