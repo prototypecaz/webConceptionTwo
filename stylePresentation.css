@@ -45,7 +45,7 @@
 }
 
 .etapeThree{
-    background-color: rgb(255, 11, 11);
+    background-color: #ffffff;
 }
 
 
@@ -87,7 +87,7 @@
 }
 
 .blocProject{
-    width: 28rem;
+    width: 27rem;
     height: 35rem;
     border:2px solid white;
     border-radius: 1rem;
@@ -180,12 +180,13 @@
 }
 
 .project{
-    width: 28rem;
+    width: 27rem;
     height: 35rem;
     position: absolute;
     border:2px solid white;
     border-radius: 1rem;
-    padding:0 4rem
+    padding:0 4rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 

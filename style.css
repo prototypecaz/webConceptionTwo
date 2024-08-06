@@ -18,6 +18,11 @@ html {
     font-size: 1vw;
 }
 
+.title-letter{
+    transform: rotateX(90deg) translateX(-30%);
+    opacity: 0;
+}
+
 body::-webkit-scrollbar {
     display: none;
 }
@@ -50,6 +55,16 @@ body::-webkit-scrollbar {
     gap: 1rem;
 }
 
+.ancre {
+    opacity: 1;
+    transform:translateY(100%);
+    opacity: 0;
+}
+
+.social-links > span{
+    opacity: 0;
+}
+
 a {
     text-decoration: none;
     color: black;
@@ -59,6 +74,8 @@ a {
     height: 0.1rem;
     width: 100%;
     background-color: black;
+    transform: scaleX(0);
+    transform-origin: left;
 }
 
 .main-content {
@@ -84,6 +101,7 @@ a {
 
 .letter {
     display: inline-block;
+    opacity: 0;
 }
 
 .letterSpacing{
@@ -114,6 +132,8 @@ a {
     font-family: Lausane;
     gap: 2rem;
     letter-spacing: -1rem;
+    transform: translateY(100%);
+    opacity: 0;
 }
 
 .highlight-letter {
@@ -142,6 +162,11 @@ a {
     left: 40%;
 }
 
+.numberYear{
+    transform: rotateX(90deg) translateY(-30%);
+    opacity: 0;
+}
+
 .vertical-separator {
     height: 100vh;
     width: 0.1rem;
@@ -149,13 +174,15 @@ a {
     position: absolute;
     top: 0;
     right: 5%;
+    transform: scaleY(0);
+    transform-origin: top;
 }
 
 
 .circlePresentation {
     height: 100vh;
     width: 100vw;
-    background-color: rgb(221, 17, 17);
+    background-color: white;
     position: fixed;
     clip-path: circle(0%);
     top: 0;

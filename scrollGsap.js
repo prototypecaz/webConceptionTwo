@@ -44,7 +44,7 @@ function initAnimations() {
       scrollTrigger: {
         trigger: '.container',
         start: 'top top',
-        end: () => offsetWidth + windowInnerWidth + moveDistanceBlocHistoire , // Ajustez cette valeur selon la durée souhaitée de l'animation
+        end: () => offsetWidth + windowInnerWidth + moveDistanceBlocHistoire + 1000  , // Ajustez cette valeur selon la durée souhaitée de l'animation
         scrub: 2,
         pin: true,
 
@@ -53,7 +53,7 @@ function initAnimations() {
 
     // Ajoutez l'animation de clipPath à la timeline
     timeline.to('.circlePresentation', {
-      clipPath: 'circle(100%)',
+      clipPath: 'circle(80%)',
       ease: 'linear',
     });
 
@@ -109,7 +109,7 @@ projects.forEach((project, index) => {
     const b = values[1];
     initialRotate = Math.round(Math.atan2(b, a) * (180 / Math.PI)); // Convertir en degrés
   }
-console.log(project)
+
   timeline.to(project, {
     y: 0,
     x:0,
@@ -119,7 +119,7 @@ console.log(project)
     onUpdate: function(){
 
       globalProgress = (this.progress() + index) / projects.length;
-      console.log(globalProgress)
+
       if (this.progress() > 0 && this.progress() <= 1) {
         projectNumber.style.transform = `translateY(${globalProgress * -75}%)`;
 
@@ -142,21 +142,36 @@ timeline.to('.blocProject', {
 },1);
 
 timeline.to('.circlePresentation2', {
-  clipPath: 'circle(100%)',
+  clipPath: 'circle(80%)',
   ease: 'linear',
+  onUpdate: function() {
+    // Vérifier si la progression de l'animation est à 80%
+    if (this.progress() >= 0.6 ) {
+      // Lancer l'animation de titleChapitre
+      gsap.to(".titleChapitre", {duration: 0.3, opacity: 1, x: 0});
+      gsap.to(".textChapitre", {duration: 0.3, opacity: 1, x: 0,delay:0.15});
+      // Mettre à jour la variable pour éviter de lancer l'animation plusieurs fois
+
+    }
+  }
 });
+
 
 
 let lastYPercent = 0;
 let lastImageIndex = 1;
 const totalImages = 150;
+let titleChapitre2Animated = false;
+let titleChapitre3Animated = false;
+let titleChapitre4Animated = false;
+let titleChapitre5Animated = false;
 
 timeline.to('.rightBlocHistoire', {
   y: -moveDistanceBlocHistoire,
   ease: 'linear',
   onUpdate: function() {
     const progress = this.progress();
-console.log('ok')
+
     // Calculez l'index de l'image basé sur le pourcentage de progression
     let newImageIndex = Math.floor(progress * totalImages) + 1;
     newImageIndex = Math.max(1, Math.min(newImageIndex, totalImages));
@@ -173,10 +188,37 @@ console.log('ok')
 
     // Changez .anneeSolo seulement si yPercent a changé pour éviter des changements inutiles
     if (yPercent !== lastYPercent) {
+
+
       requestAnimationFrame(() => {
         gsap.set('.anneeSolo', { yPercent: yPercent });
       });
       lastYPercent = yPercent;
+
+     // Utilisez des conditions combinées pour chaque animation
+     if (yPercent <= -10 && !titleChapitre2Animated) {
+      gsap.to(".titleChapitre2", { duration: 0.3, opacity: 1, x: 0 });
+      gsap.to(".textChapitre2", {duration: 0.3, opacity: 1, x: 0,delay:0.15});
+      titleChapitre2Animated = true;
+    }
+
+    if (yPercent <= -30 && !titleChapitre3Animated) {
+      gsap.to(".titleChapitre3", { duration: 0.3, opacity: 1, x: 0 });
+      gsap.to(".textChapitre3", {duration: 0.3, opacity: 1, x: 0,delay:0.15});
+      titleChapitre3Animated = true;
+    }
+
+    if (yPercent <= -50 && !titleChapitre4Animated) {
+      gsap.to(".titleChapitre4", { duration: 0.3, opacity: 1, x: 0 });
+      gsap.to(".textChapitre4", {duration: 0.3, opacity: 1, x: 0,delay:0.15});
+      titleChapitre4Animated = true;
+    }
+
+    if (yPercent <= -70 && !titleChapitre5Animated) {
+      gsap.to(".titleChapitre5", { duration: 0.3, opacity: 1, x: 0 });
+      gsap.to(".textChapitre5", {duration: 0.3, opacity: 1, x: 0,delay:0.15});
+      titleChapitre5Animated = true;
+    }
     }
   }
 });
@@ -186,7 +228,7 @@ console.log('ok')
 
 
 timeline.to('.circlePresentation3', {
-  clipPath: 'circle(100%)',
+  clipPath: 'circle(80%)',
   ease: 'linear',
 });
 
