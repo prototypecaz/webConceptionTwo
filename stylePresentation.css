@@ -122,9 +122,13 @@
 .titleCard{
     color:white;
     text-align: center;
-    padding: 2rem 0;
-    font-size: 1.5rem;
+    padding: 0.5rem 3rem;
+    font-size: 1rem;
     font-family: lausane;
+    border-radius: 3.5rem;
+    border: 1px solid #fff;
+    letter-spacing: 0.2rem;
+
 }
 
 .relativeHeightWidth {
@@ -163,20 +167,25 @@
 }
 
 .circleStyle {
-    height: 11rem;
-    width: 11rem;
+    height: 12.5rem;
+    width: 12.5rem;
     border: 1px solid white;
     border-radius: 100%;
-    margin: 2rem auto;
     background-color: white;
+}
+
+#canvas{
+  
+    image-rendering: pixelated; /* Pour un rendu pixelisé */
+
 }
 
 .whiteTextCenter {
     color: white;
-    margin-top: 4rem;
     font-size: 1.2rem;
     text-align: center;
     font-family: Lausane;
+    transform: translateY(-2rem);
 }
 
 .project{
@@ -187,6 +196,10 @@
     border-radius: 1rem;
     padding:0 4rem;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
 }
 
 
@@ -249,7 +262,7 @@ div .project:nth-of-type(3) {
 
 div .project:nth-of-type(4) {
     background-color: rgb(190, 190, 190);
-    transform: rotate(-14.9deg) translate(0,-100vh);
+    transform: rotate(-15deg) translate(0,-100vh);
 
 }
 

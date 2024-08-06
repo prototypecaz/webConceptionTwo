@@ -44,7 +44,7 @@ function initAnimations() {
       scrollTrigger: {
         trigger: '.container',
         start: 'top top',
-        end: () => offsetWidth + windowInnerWidth + moveDistanceBlocHistoire + 1000  , // Ajustez cette valeur selon la durée souhaitée de l'animation
+        end: () => offsetWidth + windowInnerWidth + moveDistanceBlocHistoire , // Ajustez cette valeur selon la durée souhaitée de l'animation
         scrub: 2,
         pin: true,
 
